@@ -71,7 +71,7 @@ body{
 
 <body>
 <h1 class="header">Welcome to Online Cafe</h1>
-<h1 class="head2">Registration for Authur</h1>
+<h1 class="head2">Registration for Author</h1>
 
 <div  class="form" onsubmit="return myfun()">
     		<form id="contactform" action="/register" method="post"> 
@@ -126,7 +126,9 @@ body{
             <p class="contact"><label for="phone">About Yourself:</label></p> <br>
             <textarea id="phone" name="bio" placeholder="Describe Yourself" required="" type="text" maxlength="100"></textarea>
              <p class="contact"><label for="phone">Price</label></p> 
-            <input id="phone" name="rate" placeholder="Rs/hr" required="" type="number" min="10" max="100"> <br>
+            <input id="phone" name="rate" placeholder="Rs/hr" required="" type="number" min="10" max="100"> 
+              <p class="contact"><label for="phone">Year Of Experience</label></p> 
+            <input id="phone" class="exper" name="exp" placeholder="Experience" required="" type="number"  min="0"> <br>
             <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!"type="submit"> 	 
    </form>
    <script type="text/javascript">
@@ -140,6 +142,11 @@ body{
       else{
         document.getElementById('show').innerHTML="Incorrect email Pattern";
         return false;
+      }
+      if(document.querySelector(".exper").value==0){
+        var ans=confirm("Do you want to learn?");
+      if(ans)
+      window.location="https://cdscoonline.gov.in/CDSCO/UserRegistrationForm";
       }
     }
    </script> 
