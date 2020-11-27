@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contact Us</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <style>
+  .get_in_touch{
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 20px 40px 0px rgba(0,0,0,0.7);
+    padding: 30px;
+}
+
+.get_in_touch .title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right,#f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+}
+
+.contact-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text + .label{
+    transform: translateY(-24px);
+}
+
+.contact-form .input-text:focus{
+    outline: none;
+}
+
+.contact-form .label{
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .submit-btn{
+    display: inline-block;
+    background: linear-gradient(125deg, #a72879, #064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+   </style>
+</head>
+<body>
+    <form action="/CustCare" method="POST">
+    <section class="get_in_touch">
+        <h1 class="title">Get In Touch</h1>
+        <div class="container">
+            <div class="contact-form row">
+                <div class="form-field col-lg-6">
+                    <input id="name" class="input-text" type="text" name="username">
+                    <label for="name" class="label">User name</label>
+                </div>
+                <div class="form-field col-lg-6">
+                    <input id="email" class="input-text" type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+                <div class="form-field col-lg-6">
+                    <input id="Issue" class="input-text" type="text" name="issue">
+                    <label for="Issue" class="label">Issue Title</label>
+                </div>
+                <div class="form-field col-lg-6">
+                    <input id="phone" class="input-text" type="text" name="phone">
+                    <label for="phone" class="label">Contact Number</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="message" class="input-text" type="text" name="msg">
+                    <label for="message" class="label">Message</label>
+                </div>
+                <div class="form-field col-lg-12 sub">
+                    <input class="submit-btn" type="submit" name="">
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>
+</body>
+</html>>
