@@ -1,0 +1,149 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body{
+    background-color: rgb(143, 145, 143);
+     font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  .container{
+    width: 350px;
+    height: 250px;
+   
+    border: solid red 3px;
+    margin-bottom: 5px;
+    border-radius: 9px;
+    background-color :rgb(171, 172, 170);
+  }
+  .container:hover{
+    background-color:  rgb(130, 131, 130);
+    width: 360px;
+    height: 260;
+    box-shadow:1px 1px 30px 7px rgba(235, 36, 14, 0.644);
+  }
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(31, 108, 223);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: rgb(19, 19, 150);
+    font-weight: bolder;
+    
+}
+#nm{
+  text-align: center;
+  margin-left: 40%;
+  display: inline;
+  font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(236, 38, 54);
+}
+.enty{
+  padding-bottom: 3px;
+  color: rgb(19, 19, 150);
+  font-size: 20px;
+}
+#bi{
+  font-size: 17;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+</style>
+    </head>
+    <body>
+
+<div class="navbar">
+  <a href="/">Logout</a>
+  <a href="cust_care">Customer Care</a>
+  <a href="#">Profile</a>
+  
+  
+</div>
+    
+ 
+      
+        {{#each users}}
+        
+
+     <div class="container">
+
+               <h2 id="nm">{{name}}</h2> <br> 
+              <span class="enty"><b>Email:</b> {{email}}</span> <br> 
+               <span class="enty"><b>Mobile:</b> {{phone}}</span> <br>
+              <span class="enty"><b>Gender:</b> {{gender}}</span> <br>
+              <span class="enty"><b>Rate:</b> ₹{{rate}} /hr</span> <br>
+               <span class="enty" id="bi"><b></b> {{bio}}</span> <br><br>
+               <a class="btn btn-primary" href="/show/{{_id}}" role="button">Profile</a>
+                <a class="btn btn-primary" href="/show/{{_id}}" role="button">Connect</a>
+                
+       </div>        
+                           
+        {{/each}}
+
+
+    </body>
+</html>
